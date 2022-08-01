@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+import { onMounted } from 'vue';
+import axios from "axios"
+
+onMounted(() => {
+    
+})
 
 </script>
 
