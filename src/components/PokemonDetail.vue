@@ -43,11 +43,11 @@ onMounted(() => {
       <h1>{{ data.name.toUpperCase() }}</h1>
       <h3>Id : {{ data.id }}</h3>
       <!--Pokemon Img-->
-      <div class="pokemon">
-        <img :src="data.url" alt="" />
-        <img :src="data.back" alt="" />
-        <img :src="data.backshiny" alt="" />
-        <img :src="data.default" alt="" />
+      <div class="pokemon" >
+        <img :src="data.url" alt="data.name" loading="lazy"/>
+        <img :src="data.back" alt="data.name" loading="lazy"/>
+        <img :src="data.backshiny" alt="data.name" loading="lazy" />
+        <img :src="data.default" alt="data.name" loading="lazy" />
       </div>
     </div>
   </div>
