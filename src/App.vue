@@ -1,8 +1,8 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,17 +11,16 @@
   color: #2c3e50;
   margin-top: 120px;
 }
-.container{
+.container {
   max-width: 1200px;
   margin: 0px auto;
 }
-a{
+a {
   text-decoration: none;
 }
 @media only screen and (max-width: 600px) {
- .continer{
-  width: 90% !important;
- }
+  .continer {
+    width: 90% !important;
+  }
 }
-
 </style>

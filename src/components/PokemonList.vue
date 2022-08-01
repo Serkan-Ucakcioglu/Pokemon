@@ -12,22 +12,21 @@ const data = ref<object>();
 onMounted(() => {
   axios("https://pokeapi.co/api/v2/pokemon").then((res) => {
     data.value = res.data.results;
-    console.log(res.data);
   });
 });
 </script>
 
 <template>
   <div class="container">
-  <!--head title-->
+    <!--head title-->
     <h1>Which pokemon would you like to go to?</h1>
     <!--card -->
     <div class="card">
-    <!--Pokemon data-->
+      <!--Pokemon data-->
       <div class="pokemon" v-for="(pokemon, index) in data" :key="index">
-      <!--dynamic router-->
+        <!--dynamic router-->
         <router-link :to="{ name: 'about', params: { url: pokemon.url } }">
-         {{index + 1 }}. {{ pokemon.name.toUpperCase() }}
+          {{ index + 1 }}. {{ pokemon.name.toUpperCase() }}
         </router-link>
       </div>
     </div>
