@@ -1,9 +1,22 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 import axios from "axios"
 
+interface dataTypes {
+    name: string,
+    url: string,
+}
+
+ const data: dataTypes = reactive({
+    name: '',
+    url: ''
+})
+
 onMounted(() => {
-    
+    axios('https://pokeapi.co/api/v2/pokemon')
+    .then(res => {
+        console.log(res.data.results);
+    })
 })
 
 </script>
