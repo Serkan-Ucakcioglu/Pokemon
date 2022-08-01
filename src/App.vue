@@ -14,5 +14,8 @@
   max-width: 1200px;
   margin: 0px auto;
 }
+a{
+  text-decoration: none;
+}
 
 </style>
