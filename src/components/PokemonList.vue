@@ -19,10 +19,11 @@ onMounted(() => {
 
 <template>
   <div class="container">
+    <h1>Which pokemon would you like to go to?</h1>
     <div class="card">
       <div class="pokemon" v-for="(pokemon, index) in data" :key="index">
         <router-link :to="{ name: 'about', params: { id: pokemon.url } }">
-          {{ pokemon.name.toUpperCase() }}
+         {{index + 1 }}. {{ pokemon.name.toUpperCase() }}
         </router-link>
       </div>
     </div>
@@ -36,7 +37,7 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 15px;
   height: 600px;
-  margin: 0;
+  margin-top: 20px;
 
   .pokemon {
     display: flex;
@@ -51,6 +52,7 @@ onMounted(() => {
     a {
       color: black;
       font-weight: bold;
+      display: flex;
     }
   }
   .pokemon_img {
