@@ -8,10 +8,10 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/about',
+    path: '/about/:url',
     name: 'about',
-    props: true,
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue') //lazy load 
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), //lazy load
+    props: true, 
   }
 ]
 
