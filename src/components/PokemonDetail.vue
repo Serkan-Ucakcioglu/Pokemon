@@ -4,6 +4,7 @@ import axios from "axios";
 
 interface dataTypes {
   name: string;
+  id: number;
   back: string;
   backshiny: string;
   default: string;
@@ -16,6 +17,7 @@ const data: dataTypes = reactive({
   back: "",
   default: "",
   backshiny: "",
+  id: 0,
 });
 const props = defineProps<{
   url: string;
@@ -28,6 +30,8 @@ onMounted(() => {
     data.backshiny = res.data.sprites.back_shiny;
     data.default = res.data.sprites.front_default;
     data.url = res.data.sprites.front_shiny;
+    data.id = res.data.id
+    console.log(res.data);
   });
 });
 </script>
@@ -37,6 +41,7 @@ onMounted(() => {
     <!--card -->
     <div class="card-detail">
       <h1>{{ data.name.toUpperCase() }}</h1>
+      <h3>Id : {{data.id}}</h3>
       <!--Pokemon Img-->
       <div class="pokemon">
         <img :src="data.url" alt="" />
