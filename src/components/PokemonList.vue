@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, ref, toRefs } from "vue";
+import { onMounted, ref } from "vue";
 import axios from "axios";
 
 interface dataTypes {
