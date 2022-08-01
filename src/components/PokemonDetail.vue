@@ -30,7 +30,7 @@ onMounted(() => {
     data.backshiny = res.data.sprites.back_shiny;
     data.default = res.data.sprites.front_default;
     data.url = res.data.sprites.front_shiny;
-    data.id = res.data.id
+    data.id = res.data.id;
     console.log(res.data);
   });
 });
@@ -41,7 +41,7 @@ onMounted(() => {
     <!--card -->
     <div class="card-detail">
       <h1>{{ data.name.toUpperCase() }}</h1>
-      <h3>Id : {{data.id}}</h3>
+      <h3>Id : {{ data.id }}</h3>
       <!--Pokemon Img-->
       <div class="pokemon">
         <img :src="data.url" alt="" />
@@ -59,7 +59,9 @@ onMounted(() => {
   justify-content: center;
   .card-detail {
     width: 300px;
-    border: 4px solid black;
+    border: 4px solid #6b5b95;
+    background: white;
+    color: black;
     border-radius: 4px;
     box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.2);
   }
