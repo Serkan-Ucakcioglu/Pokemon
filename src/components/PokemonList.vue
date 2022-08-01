@@ -12,6 +12,7 @@ const data = ref<object>();
 onMounted(() => {
   axios("https://pokeapi.co/api/v2/pokemon").then((res) => {
     data.value = res.data.results;
+    console.log(res.data);
   });
 });
 </script>

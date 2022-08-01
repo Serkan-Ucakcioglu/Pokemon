@@ -58,12 +58,29 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   .card-detail {
-    width: 300px;
-    border: 4px solid #6b5b95;
-    background: white;
+    width: 800px;
     color: black;
     border-radius: 4px;
-    box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    .pokemon {
+      display: flex;
+      justify-content: space-around;
+      img {
+        border: 3px solid #5c5a5a;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .pokemon {
+    flex-direction: column !important;
+    align-items: center;
+
+    width: 100%;
   }
 }
 </style>
