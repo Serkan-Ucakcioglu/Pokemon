@@ -36,8 +36,10 @@ onMounted(() => {
 
 <template>
   <div class="container">
+  <!--card -->
     <div class="card-detail" >
       <h1>{{ data.name.toUpperCase() }}</h1>
+      <!--Pokemon Img-->
      <div class="pokemon">
        <img :src="data.url" alt="" />
        <img :src="data.back" alt="" />

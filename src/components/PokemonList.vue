@@ -19,9 +19,13 @@ onMounted(() => {
 
 <template>
   <div class="container">
+  <!--head title-->
     <h1>Which pokemon would you like to go to?</h1>
+    <!--card -->
     <div class="card">
+    <!--Pokemon data-->
       <div class="pokemon" v-for="(pokemon, index) in data" :key="index">
+      <!--dynamic router-->
         <router-link :to="{ name: 'about', params: { url: pokemon.url } }">
          {{index + 1 }}. {{ pokemon.name.toUpperCase() }}
         </router-link>

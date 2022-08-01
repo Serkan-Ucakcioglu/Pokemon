@@ -18,5 +18,10 @@
 a{
   text-decoration: none;
 }
+@media only screen and (max-width: 600px) {
+ .continer{
+  width: 90% !important;
+ }
+}
 
 </style>
