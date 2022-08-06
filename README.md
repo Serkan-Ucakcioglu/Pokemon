@@ -1,4 +1,4 @@
-### Home Page 
+### Home Page  Pokemon
 ![image](https://user-images.githubusercontent.com/98692987/182248190-7ce25211-d86b-42cd-847f-f084334f16eb.png)
 
 ### Detail Page 
